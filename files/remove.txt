@@ -1,0 +1,496 @@
+Home page removed code----------------------------------------------------------------------------------------------->
+<section id="center" class="center_home clearfix">
+ <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#bs-carousel" data-slide-to="1" class=""></li>
+    <li data-target="#bs-carousel" data-slide-to="2" class=""></li>
+  </ol>
+  
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <?php
+		include('admin/db.php');
+		$r=mysqli_query($con,"select * from sliders order by id desc");
+		$c=1;
+		while($row=mysqli_fetch_array($r)){
+		if($c==1)
+		{
+	?>
+	<div class="item slides active">
+      
+      <div class="hero">
+	   
+	   
+	   <div class="col-sm-12">
+	    <div class="hero_i clearfix">
+		 <div class="hero_im clearfix">
+		  <div class="hero_im_1 clearfix">
+		   <img src="admin/coverimage/<?php echo $row[1]; ?>" class="iw" alt="abc">
+		  </div>
+		  <div class="hero_im_2 clearfix">
+			 <h1><span>I'm</span> Providing Tutorsss</h1>
+			 <p> World Best Tutor Available on this website you can choose tutor according 
+			 to Subject Wise.</p>
+			 <h4><a class="button" href="#">Learn More</a></h4>
+		  </div>
+		 </div>
+		</div>
+	   </div>
+      </div>
+    </div>
+		<?php } else { ?>
+    <div class="item slides">
+      
+      <div class="hero">
+	   
+	   <div class="col-sm-12">
+	    <div class="hero_i clearfix">
+		 <div class="hero_im clearfix">
+		  <div class="hero_im_1 clearfix">
+		   <img src="admin/coverimage/<?php echo $row[1]; ?>" class="iw" alt="abc">
+		  </div>
+		  <div class="hero_im_2 clearfix">
+			 <h1><span>I'm</span> Providing Tutor</h1>
+			  <p> World Best Tutor Available on this website you can choose tutor according 
+			 to Subject Wise.</p>
+			 <h4><a class="button" href="#">Learn More</a></h4>
+		  </div>
+		 </div>
+		</div>
+	   </div>
+      </div>
+    </div>
+		<?php } $c++; } ?>
+		
+    
+</div></div>
+</section>
+
+<section id="course_home">
+ <div class="container">
+  <div class="row">
+   <div class="col-sm-5">
+    <div class="course_home_r clearfix">
+	 <img src="ba.png" class="iw" alt="abc">
+	</div>
+   </div>
+   <div class="col-sm-7">
+    <div class="course_home_l clearfix">
+	 <h2>Tutor Provide Guidline To Achive Goal</h2>
+	 <p> Our Team Can Help To Provide Best Tutor And Provide All The Solution of your problem
+	 while you are phase duing study. so our best tutor give 100% result  </p>
+	 <div class="course_home_li clearfix">
+	  <div class="col-sm-6 space_left">
+	   <div class="course_home_lii clearfix">
+		   <div class="col-sm-2 space_left"><span class="fa fa-user"></span></div>
+		   <div class="col-sm-10 space_right"><h4 class="mgt"> Better Evaluation of Students</h4></div>
+	   </div>
+
+	  </div>
+	  <div class="col-sm-6 space_left">
+	    <div class="course_home_lii clearfix">
+	     <div class="col-sm-2 space_left"><span class="fa fa-book"></span></div>
+	     <div class="col-sm-10 space_right"><h4 class="mgt"> Best Learner To Provide Education</h4></div>
+		</div>
+
+	  </div>
+	 </div>
+	 <div class="course_home_li clearfix">
+	  <div class="col-sm-6 space_left">
+	   <div class="course_home_lii clearfix">
+		   <div class="col-sm-2 space_left"><span class="fa fa-play-circle-o"></span></div>
+		   <div class="col-sm-10 space_right"><h4 class="mgt">Live Video Recording Available</h4></div>
+	   </div>
+
+	  </div>
+	  <div class="col-sm-6 space_left">
+	    <div class="course_home_lii clearfix">
+	     <div class="col-sm-2 space_left"><span class="fa fa-pencil-square-o"></span></div>
+	     <div class="col-sm-10 space_right"><h4 class="mgt">Table Teaching Available</h4></div>
+		</div>
+
+	  </div>
+	 </div>
+	 <div class="course_home_li clearfix">
+	  <div class="col-sm-6 space_left">
+	   <div class="course_home_lii clearfix">
+		   <div class="col-sm-2 space_left"><span class="fa fa-globe"></span></div>
+		   <div class="col-sm-10 space_right"><h4 class="mgt"> Out Tutor Come in Different Country</h4></div>
+	   </div>
+
+	  </div>
+	  <div class="col-sm-6 space_left">
+	    <div class="course_home_lii clearfix">
+	     <div class="col-sm-2 space_left"><span class="fa fa-bookmark-o"></span></div>
+	     <div class="col-sm-10 space_right"><h4 class="mgt">  Provide The Best Education </h4></div>
+		</div>
+
+	  </div>
+	 </div>
+	</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="example_h">
+ <div class="container">
+ <div class="work_home_1 clearfix">
+    <h2 class="text-center">Our Best Tutor</h2>
+   </div>
+ <br/>	
+  <div class="row">
+   <?php
+	include('admin/db.php');
+	$r=mysqli_query($con,"select * from addtutor order by id desc");
+$c=1;
+	while($row=mysqli_fetch_array($r)){
+   ?>
+   
+   
+	 <div class="col-sm-3">
+	  <div class="example_h_1r clearfix">
+	   <?php
+	   if(isset($_SESSION["idd"])){
+	   ?>
+	   <a href='details.php?a=<?php echo $row[0] ?>'>
+	   <?php } else { ?>
+	<a href='reg.php'> <?php } ?>
+	   <img src="admin/tutorphoto/<?php echo $row[5] ?>" class="iw mgt" alt="abc"></a><br/>
+	   <h5 class='text-center text-uppercase' style='font-weight:bold;text-transform:uppercase'><?php echo $row[1]; ?></h5>
+	   <h5 class='text-center text-uppercase' style='font-weight:bold;text-transform:uppercase'><?php echo $row[3]; ?></h5>
+	   
+	  </div>
+	 </div>
+	 
+<?php $c++; if($c==5) { echo "<br/><hr/>"; $c=1; }} ?>
+
+
+   </div>
+  </div>
+ 
+</section>
+
+<section id="goal" class="clearfix">
+ <div class="container">
+  <div class="row">
+   <div class="goal_1 clearfix">
+    <div class="col-sm-6">
+	 <div class="goal_1_l clearfix">
+	  <h2>We Reach Our Goals</h2>
+	  <h3 class="bold">We Have the Best Portfolios</h3>
+	  <h4>Providing 100% result to the student</h4>
+	  <p>We are here to provide 100% result.and also provide expert tutor with more than 20 year experience Faculty
+	  It will guide our student to what are the carrier opportunity available </p>
+	  <div class="clearfix goal_1_li">
+	   <div class="col-sm-4 space_left">
+	    <span><i class="fa fa-star"></i></span>
+		<h4>US Quiz</h4>
+		<h5>2 Position</h5>
+	   </div>
+	   <div class="col-sm-4 space_left">
+	    <span><i class="fa fa-university"></i></span>
+		<h4>2017</h4>
+		<h5>Connect With More University</h5>
+	   </div>
+	   <div class="col-sm-4 space_left">
+	    <span><i class="fa fa-trophy"></i></span>
+		<h4>Graduation</h4>
+		<h5>Providing graduation Details</h5>
+	   </div>
+	  </div>
+	 </div>
+	</div>
+	
+	<div class="col-sm-6">
+	 <div class="goal_1_r text-center clearfix">
+	  <h3><i class="fa fa-leaf"></i> Top Ranked Students of our Institue <i class="fa fa-leaf"></i></h3>
+	  <p>We ae provideing india top most rank student </p>
+	  <div class="goal_1_ri clearfix">
+	   <?php
+	   include('admin/db.php');
+	   $r=mysqli_query($con,"select * from toprank order by id desc limit 2");
+	   while($row=mysqli_fetch_array($r)){
+	   ?>
+	   <div class="col-sm-6">
+	    <div class="goal_1_rii clearfix">
+		  <img src="admin/toprank/<?php echo $row[4]; ?>" alt="abc" class="iw">
+		  <h4><?php echo $row[1]; ?></h4>
+		  <h5><?php echo $row[5]; ?></h5>
+		</div>
+	   </div>
+	   <?php } ?>
+	  </div>
+	 </div>
+	</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="work_home">
+ <div class="container">
+  <div class="row">
+   <div class="work_home_1 clearfix">
+    <h2 class="text-center">Our Course Work</h2>
+   </div>
+   
+   <div class="work_home_2 clearfix">
+     <div class="col-sm-3">
+	  <div class="work_home_2_i text-center clearfix">
+	   <div class="work_home_2_ii text-center clearfix">
+	    <h1 class="bold"><span>1</span></h1>
+	   </div>
+	   	<h3 class="bold">Idendify the task</h3>
+		<p>Firstly identify the task and get your goal.</p>
+	  </div>
+	 </div>
+     <div class="col-sm-3">
+	  <div class="work_home_2_i text-center clearfix">
+	   <div class="work_home_2_ii work_home_2_iio text-center clearfix">
+	    <h1 class="bold"><span>2</span></h1>
+	   </div>
+	   	<h3 class="bold">Bringing the task</h3>
+		<p>get the goal of your task </p>
+	  </div>
+	 </div>
+	 <div class="col-sm-3">
+	  <div class="work_home_2_i text-center clearfix">
+	   <div class="work_home_2_ii text-center clearfix">
+	    <h1 class="bold"><span>3</span></h1>
+	   </div>
+	   	<h3 class="bold">Setting the task</h3>
+		<p>Manage and perform the task Here.</p>
+	  </div>
+	 </div>
+	 <div class="col-sm-3">
+	  <div class="work_home_2_i text-center clearfix">
+	   <div class="work_home_2_ii work_home_2_iio text-center clearfix">
+	    <h1 class="bold"><span>4</span></h1>
+	   </div>
+	   	<h3 class="bold">Summary of the task</h3>
+		<p>Find out the abstract of the project  here.</p>
+	  </div>
+	 </div>
+   </div>
+   <div class="work_home_3 text-center clearfix">
+    <h4><a class="button" href="#">View Work</a></h4>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="tutor">
+ <div class="container">
+  <div class="row">
+   <div class="tutor_1 clearfix">
+    <div class="col-sm-6">
+	 <div class="tutor_1l clearfix">
+	   <h3 class="h_bg">Live Tutoring</h3>
+	   
+	   <p> As a tutor, you choose when you work. Indicate the days & times at which you are available to tutor and our system will work within your constraints.</p>
+	   <h5><a class="button" href="#">View Our Courses</a></h5>
+	 </div>
+	</div>
+	<div class="col-sm-6">
+	 <div class="tutor_1r clearfix">
+	  <p> As a tutor, you choose when you work. Indicate the days & times at which you are available to tutor and our system will work within your constraints.</p>
+	  <div class="tutor_1ri text-center clearfix">
+	   <div class="col-sm-3">
+	    <div class="tutor_1rii clearfix">
+		  <span><i class="fa fa-compass"></i></span>
+		  <h5 class="bold">Live Example</h5>
+		</div>
+	   </div>
+	   <div class="col-sm-3">
+	    <div class="tutor_1rii clearfix">
+		  <span><i class="fa fa-graduation-cap"></i></span>
+		  <h5 class="bold">Our University</h5>
+		</div>
+	   </div>
+	   <div class="col-sm-3">
+	    <div class="tutor_1rii clearfix">
+		  <span><i class="fa fa-book"></i></span>
+		  <h5 class="bold">New Syllabus</h5>
+		</div>
+	   </div>
+	   <div class="col-sm-3">
+	    <div class="tutor_1rii clearfix">
+		  <span><i class="fa fa-flask"></i></span>
+		  <h5 class="bold">Our Practical</h5>
+		</div>
+	   </div>
+	  </div> 
+	 </div>
+	</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="skill_home">
+ <div class="container">
+  <div class="row">
+   <div class="skill_home_1 clearfix">
+    <div class="col-sm-6">
+	 <div class="skill_home_1r text-center clearfix">
+	  <p class="para_1 bold"><i class="fa fa-book"></i> Search The Tutor</p>
+	  <p class="bold"><i class="fa fa-copy"></i>  Study Carefully and manage your study</p>
+	  <p class="para_1 bold"><i class="fa fa-pencil"></i> Write some important point during lecture</p>
+	  <p class="bold"><i class="fa fa-graduation-cap"></i> And get the  degree of your course</p>
+	  <p class="para_1 bold"><i class="fa fa-inbox"></i> Find your  Success Here</p>
+	 </div>
+	</div>
+    <div class="col-sm-6">
+	 <div class="skill_home_1l clearfix">
+	  <h3 class="h_bg_1">We Teach Latest Skills </h3>
+	  <p>Teach students in the subjects & grade level(s) you decide, either online or in-person. Our platform includes the best teaching software to improve your experience
+	  As a tutor, you choose when you work. Indicate the days & times at which you are available to tutor and our system will work within your constraints.</p>
+	  <p class="bold">As a tutor, you choose when you work. Indicate the days & times at which you are available to tutor and our system will work within your constraints.</p>
+	  <ul>
+	   <li><a class="button_1" href="#">What We Teach</a></li>
+	   <li><a class="button" href="#">How We Teach</a></li>
+	  </ul>
+	 </div>
+	</div>
+   </div>
+  </div>
+ </div>
+</section>
+<!--
+<section id="achievements">
+ <div class="container">
+  <div class="row">
+   <div class="achiev_1 text-center clearfix">
+    <h2 class="h_bg mgt_l">Our Achievements</h2>
+	<span>
+	  <i class="fa fa-star"></i>
+	  <i class="fa fa-star"></i>
+	  <i class="fa fa-star"></i>
+	  <i class="fa fa-star"></i>
+	  <i class="fa fa-star"></i>
+	</span>
+	<h3 class="bold">One of the Highest Rated Course Tutor</h3>
+	<h4>Updated Learning Services</h4>
+	<p>  Fusce nec tellus sed augue semper porta. Vestibulum lacinia arcu eget nulla.Class aptent taciti sociosqu<br> ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitursodales ligula in libero <br>Sed dignissim lacinia nunc.</p>
+   </div>
+   <div class="achiev_2 clearfix">
+    <div class="col-sm-4">
+	 <div class="achiev_2i text-center clearfix">
+	  <span><i class="fa fa-file-code-o"></i></span>
+	  <h1 class="bold">722+</h1>
+	  <h3>Certification</h3>
+	  <p> Vestibulum lacinia arcu eget nulla.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+	 </div>
+	</div>
+	<div class="col-sm-4">
+	 <div class="achiev_2i text-center clearfix">
+	  <span class="bg_1"><i class="fa fa-trophy"></i></span>
+	  <h1 class="bold">53</h1>
+	  <h3>Awards</h3>
+	  <p> Vestibulum lacinia arcu eget nulla.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+	 </div>
+	</div>
+	<div class="col-sm-4">
+	 <div class="achiev_2i text-center clearfix">
+	  <span><i class="fa fa-graduation-cap"></i></span>
+	  <h1 class="bold">250</h1>
+	  <h3>New Courses</h3>
+	  <p> Vestibulum lacinia arcu eget nulla.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+	 </div>
+	</div>
+   </div>
+  </div>
+ </div>
+</section>
+<section id="instructor">
+ <div class="container">
+  <div class="row">
+   <div class="instr_1 clearfix">
+    <div class="col-sm-3">
+	 <div class="instr_1l clearfix">
+	  <h3 class="h_bg_1">Our Instructors</h3>
+	  <img src="img/10.jpg" alt="abc" class="iw thumbnail">
+	 </div>
+	</div>
+	<div class="col-sm-9">
+	 <div class="instr_1r clearfix">
+	  <h3>Lacinia Nunc</h3>
+	  <h5>Online Principles</h5>
+	  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.Praesent mauris. Fusce nec tellus sed augue semper porta.</p>
+	 </div>
+	 <div class="instr_1r1 clearfix">
+	  <div class="col-sm-4 space_left">
+	   <div class="instr_1r1i clearfix">
+	    <h5><i class="fa fa-map-marker"></i> 454C Integer Nec <br> <span>Ante Dapibus, OZ 12345</span></h5>
+	   </div>
+	  </div>
+	  <div class="col-sm-4 space_left">
+	   <div class="instr_1r1i clearfix">
+	    <h5><i class="fa fa-phone"></i> (91) 1234567890 <br> <span>(91) 0987654xxx</span> </h5>
+	   </div>
+	  </div>
+	  <div class="col-sm-4 space_left">
+	   <div class="instr_1r1i clearfix">
+	    <ul class="social-network social-circle">
+                        <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+	   </div>
+	  </div>
+	 </div>
+	 <div class="instr_1r2 clearfix">
+	  <h5><a class="button" href="#">Reply Us</a></h5>
+	 </div>
+	</div>
+   </div>
+  </div>
+ </div>
+</section>
+<!--
+<section id="testimonial_home">
+ <div class="container">
+  <div class="row">
+   <div class="testimonial_h_1 clearfix">
+     <h2 class="h_bg mgt_l">Testimonials</h2>
+	 <p class="text-center">Lorem ipsum dolor sit amet</p>
+   </div>
+   <div class="testimonial_h_2 mgt_l clearfix">
+	   <div class="col-sm-4">
+	    <div class="goal_1_rii text-center clearfix">
+		  <img src="img/11.jpg" alt="abc" class="iw">
+		  <h4>Semper Porta</h4>
+		  <h5>Student</h5>
+		</div>
+	   </div>
+	   <div class="col-sm-4">
+	    <div class="goal_1_rii text-center clearfix">
+		  <img src="img/12.jpg" alt="abc" class="iw">
+		  <h4>Mauris Massa</h4>
+		  <h5>Student</h5>
+		</div>
+	   </div>
+	   <div class="col-sm-4">
+	    <div class="goal_1_rii text-center clearfix">
+		  <img src="img/13.jpg" alt="abc" class="iw">
+		  <h4>Ante Dapibus</h4>
+		  <h5>Student</h5>
+		</div>
+	   </div>
+	  </div>
+   <div class="testimonial_h_3 mgt_l clearfix">
+    <p> Vestibulum lacinia arcu eget nulla.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitursodales ligula in libero.Sed dignissim lacinia nunc.</p>
+   </div>
+  </div>
+ </div>
+</section>
+-->
+-------------------------------------------------------------------------------------------------------------->
